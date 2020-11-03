@@ -1,11 +1,17 @@
 age = int(input("what's your age? "))
-price = 0
+discount = int() 
+price = 3
 
-if not(age > 18 and  age <= 60):
-  if age < 6 and age > 60:
-    price = 0
-  elif age >= 6 and age <= 18:
-    price = 1.5
+if (age < 6) or (age > 60):
+  discount = 1 #100%
+  price = price - price*discount
+
+elif (age >= 6) or (age <= 18):
+  discount = 0.5 #50%
+  price = price - price*discount
+
 else:
-  price = 3
-print(price)
+  discount = 0 # 0%
+  price = price - price*discount
+
+print(price,"is the price")
