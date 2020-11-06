@@ -1,22 +1,24 @@
-şekil = input("üçgen için 1 yazınız, dörtgen için 2 yazınız")
+şekil = input("üçgen için 1 yazınız, dörtgen için 2 yazınız ")
 
 if şekil == "1":
   üçgen1 = int(input("kenar girin: "))
   üçgen2 = int(input("kenar girin: "))
   üçgen3 = int(input("kenar girin: "))
 
-  if üçgen1 == üçgen2 and üçgen2 == üçgen3:
-    print("eşkenar üçgen")
-
-  elif (üçgen1 == üçgen2 and üçgen2 != üçgen3) or (üçgen1 == üçgen3 and üçgen3 != üçgen2) or (üçgen2 == üçgen3 and üçgen3 != üçgen1):
-    print("ikizkenar üçgen")
-  
-  elif üçgen1 != üçgen2 and üçgen2 != üçgen3 and üçgen1 != üçgen3:
-    print("sıradan üçgen")
-  
-  if not(abs(üçgen1 - üçgen2) < üçgen3 < üçgen1 + üçgen2) or (abs(üçgen1 - üçgen3) < üçgen2 < üçgen1 + üçgen3) or (abs(üçgen2 - üçgen3) < üçgen1 < üçgen2 + üçgen3):
+  if not((abs(üçgen1 - üçgen2) < üçgen3 < üçgen1 + üçgen2) or (abs(üçgen1 - üçgen3) < üçgen2 < üçgen1 + üçgen3) or (abs(üçgen2 - üçgen3) < üçgen1 < üçgen2 + üçgen3)):
     print("üçgen belirtmiyor")
+  else:
+  
+    if üçgen1 == üçgen2 and üçgen2 == üçgen3:
+      print("eşkenar üçgen")
 
+    elif (üçgen1 == üçgen2 and üçgen2 != üçgen3) or (üçgen1 == üçgen3 and üçgen3 != üçgen2) or (üçgen2 == üçgen3 and üçgen3 != üçgen1):
+      print("ikizkenar üçgen")
+  
+    elif üçgen1 != üçgen2 and üçgen2 != üçgen3 and üçgen1 != üçgen3:
+      print("sıradan üçgen")
+  
+  
 elif şekil == "2":
   a = int(input("kenar girin: "))
   b = int(input("kenar girin: "))
