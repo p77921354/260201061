@@ -1,2 +1,2 @@
 language = "python3"
-run = "python practice/geometrik.py"
+run = "python lab4/5.py"
