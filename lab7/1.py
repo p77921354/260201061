@@ -5,3 +5,4 @@ for name in names:
   age = name[1]
   if age > 18:
     print(name[0])
+    
