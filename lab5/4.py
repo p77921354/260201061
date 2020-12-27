@@ -1,16 +1,26 @@
-x = input("number: ")
-y = input("number: ")
+import time
 
-i = 1
-matched_digit = 0
-dig_1 = len(x)
-dig_2 = len(y)
+user_pass = "asdfg"
 
-while dig_1 >= i and dig_2 >= i:
-  x = int(x)
-  y = int(y)
-  if (x % (dig_1 * 10)) == (y % (dig_2 * 10)):
-    matched_digit += 1
-  dig_1 -= 1
-  dig_2 -= 1
-print(matched_digit)
+password = input("enter your password, if you can't remember it type help: ")
+
+trial = 0
+
+while True:
+  if password == user_pass:
+    print("welcome")
+    break
+  
+  elif password == "help":
+    print(user_pass[0], "maybe this help you to remember your pass...")
+
+  else:
+    password = input("wrong, try again ")
+    trial += 1
+    if trial == 2:
+      print("wait 10 seconds to try again")
+      time.sleep(10)
+      password = input("your pass")
+      if password != user_pass:
+        print("password try no longer accepted")
+        break
