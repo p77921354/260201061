@@ -6,3 +6,4 @@ for i in grades:
   final = i[2] * 0.4
   average = mid1 + mid2 + final
   print(average)
+  
