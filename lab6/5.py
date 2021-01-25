@@ -1,6 +1,6 @@
 n = int(input("Matrix number: "))
 string = ''
-list_matrix = []
+sum_list = []
 
 for i in range(n):
     for j in range(n):
